@@ -1,5 +1,7 @@
 package Abstract;
 
+import java.util.ArrayList;
+
 public abstract class Animal{
     
     private final int age;
@@ -52,5 +54,25 @@ public abstract class Animal{
         }
         doggy.sleep();
 
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(d);
+        animals.add(c);
+
+        for(Animal animal: animals){
+            animal.eat();
+            animal.sleep();
+
+            if (animal instanceof Cat){
+                Cat realCat1 = (Cat) animal;
+                realCat1.meow();
+            }else if (animal instanceof Dog){
+                Dog realDog1 = (Dog) animal;
+                realDog1.ruff();
+            }
+
+        }
+
     }
+
+    
 }
