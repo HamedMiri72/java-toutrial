@@ -18,6 +18,13 @@ public class Testers {
         }
     }
 
-    
+    public static void checkIsEmpty(Tree t) throws Exception{
+        if (t instanceof EmptyBST && !t.isEmpty()){
+            throw new Exception("Empty tree is not empty");
+        }else if (t instanceof NonEmptyBST && t.isEmpty()){
+            throw new Exception("Non-empty tree is empty");
+        }
+
+    }
     
 }
