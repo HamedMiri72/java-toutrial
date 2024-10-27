@@ -17,9 +17,12 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
         right = rightTree;
     }
 
-    public boolean isEmpty() { return false; } // Non-empty tree is never empty
+    public boolean isEmpty() {
+         return false; 
+    } // Non-empty tree is never empty
 
-    public int cardinality() { // Recursive node count
+    public int cardinality() {
+         // Recursive node count
         return 1 + left.cardinality() + right.cardinality();
     }
 
