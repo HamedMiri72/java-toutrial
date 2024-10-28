@@ -47,5 +47,4 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
     }
 }
 
-    
-}
+

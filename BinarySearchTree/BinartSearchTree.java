@@ -1,10 +1,10 @@
 package BinarySearchTree;
 
-public class BunartSearchTree {
+public class BinartSearchTree {
 
     public static void main(String[] args)throws Exception{
         EmptyBST e = new EmptyBST();
-        NonEmptyBST n = new NonEmptyBST(s);
+        NonEmptyBST n = new NonEmptyBST(5);
 
         Testers.checkIsEmpty(e);
         Testers.checkIsEmpty(n);
