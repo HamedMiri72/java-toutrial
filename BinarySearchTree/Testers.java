@@ -26,5 +26,14 @@ public class Testers {
         }
 
     }
+
+    public static void checkAddMemberCardinality(Tree t, int x) throws Exception {
+        int nT = (t.add(x)).cardinality();
+        if (nT == (t.cardinality() + 1) && t.member(x)) {
+            throw new Exception("Tree cardinality should increase, but element was already present.");
+        } else if (nT == t.cardinality() && !t.member(x)) {
+            throw new Exception("Cardinality unchanged, but element is missing.");
+        }
+    }
     
 }
