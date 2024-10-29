@@ -61,4 +61,32 @@ public class Hangman {
        }
     }
 
+    public String getFormalCurrentGuess(){
+        return "current Guess: " + currentGuss.toString();
+    }
+
+    public boolean gameOver() {
+        if (didWeWin()) {
+            System.out.println();
+            System.out.println("Congrats! You won! You guessed the right word!");
+            return true;
+        } else if (didWeLose()) {
+            System.out.println();
+            System.out.println("Sorry, you lost. You spent all of your 6 tries. "
+                    + "The word was " + mysteryWord + ".");
+            return true;
+        }
+        return false;
+    }
+
+    private boolean didWeLose() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'didWeLose'");
+    }
+
+    private boolean didWeWin() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'didWin'");
+    }
+
 }
