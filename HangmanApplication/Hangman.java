@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Hangman {
     
@@ -25,14 +26,22 @@ public class Hangman {
         currentGuss = initializeCurrentGuess();
     }
 
-    private StringBuilder initializeCurrentGuess() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initializeCurrentGuess'");
+    public StringBuilder initializeCurrentGuess() {
+        StringBuilder current = new StringBuilder();
+        for (int i= 0; i<mysterWord.length() * 2 ; i++){
+            if (i % 2 == 0 ){
+                current.append("_");
+            } else {
+                current.append(" ");
+            }
+        }
+        return current;
     }
 
-    private String pickWord() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pickWord'");
+    public String pickWord() {
+       Random rand = new Random();
+       int wordIndex = Math.abs(rand.nextInt()) % dictionary.size();
+       return dictionary.get(wordIndex);
     }
 
     public void initializeStreams() throws IOException {
