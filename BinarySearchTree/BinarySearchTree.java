@@ -1,8 +1,8 @@
 package BinarySearchTree;
 
-public class BinartSearchTree {
+public class BinarySearchTree {
 
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception{
         EmptyBST e = new EmptyBST();
         NonEmptyBST n = new NonEmptyBST(5);
 
