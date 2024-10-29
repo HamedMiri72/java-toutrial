@@ -1,6 +1,7 @@
 package HangmanApplication;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,7 +38,17 @@ public class Hangman {
     public void initializeStreams() throws IOException {
        try {
            File inFile = new File("dictionary.txt");
-       } catch (File e) {
+           fileReader = new FileReader(inFile);
+           bufferedReader = new BufferedReader(fileReader);
+           String currentLine = bufferedReader.readLine();
+           while (currentLine != null) {
+            dictionary.add(currentLine);
+            currentLine = bufferedReader.readLine();
+           }
+           bufferedReader.close();
+           fileReader.close();
+       } catch (IOException e) {
+        System.out.println("could not init streams!");
        }
     }
 
